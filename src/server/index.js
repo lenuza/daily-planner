@@ -12,6 +12,13 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
+// set port
+const port = process.env.port || 8000
+
+const server = app.listen(port, () => {
+    console.log(`Hello, listening on port ${port}`)
+})
+
 app.get('/', function (req, res) {
     res.sendFile('src/client/view/index.html')
 })
