@@ -20,7 +20,7 @@ const server = app.listen(port, () => {
 })
 
 app.get('/', function (req, res) {
-    res.sendFile('src/client/view/index.html')
+    res.sendFile('dist/index.html')
 })
 
 app.use(function (req, res, next) {
